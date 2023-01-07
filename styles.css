@@ -26,10 +26,15 @@ header > ul  {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     user-select: none;
     cursor: pointer;
     text-decoration: none;
     color: white;
+}
+
+.section-one {
+    height: calc(100vh - 60px);
 }
 
 .slideshow {
@@ -49,4 +54,45 @@ header > ul  {
 .displayed {
     opacity: 1;
     z-index: 100;
+}
+
+.section-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.pc-services-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 40vw);
+    grid-template-rows: repeat(2, 35vw);
+    gap: 15px;
+}
+
+.pc-service {
+    background-color: black;
+    background-size: cover;
+    margin: 5vh;
+    transition: all .5s;
+}
+
+.pc-service:nth-child(1) {
+    background-image: url("./images/data-recovery-service.jpg");
+}
+.pc-service:nth-child(2) {
+    background-image: url("./images/liquid-damage.jpeg");
+}
+.pc-service:nth-child(3) {
+    background-image: url("./images/pc-build-service.jpg");
+}
+.pc-service:nth-child(4) {
+    background-image: url("./images/apple-repair-service.jpeg");
+}
+
+
+.pc-service:hover {
+    transform: scale(1.1);
 }
