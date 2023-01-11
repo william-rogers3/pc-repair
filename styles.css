@@ -1,10 +1,14 @@
+:root {
+    --main-color: #181c1b;
+}
+
 * {
     padding: 0;
     margin: 0;
 }
 
 header > ul  {
-    background-color: #181c1b;
+    background-color: var(--main-color);
     display: flex;
     justify-content: center;
     list-style: none;
@@ -33,7 +37,7 @@ header > ul  {
     color: white;
 }
 
-.section-one {
+.section-1 {
     height: calc(100vh - 60px);
 }
 
@@ -56,7 +60,7 @@ header > ul  {
     z-index: 100;
 }
 
-.section-two {
+.section-2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,10 +93,72 @@ header > ul  {
     background-image: url("./images/pc-build-service.jpg");
 }
 .pc-service:nth-child(4) {
-    background-image: url("./images/apple-repair-service.jpeg");
+    background-image: url("./images/apple-devices.jpeg");
 }
-
 
 .pc-service:hover {
     transform: scale(1.1);
+}
+
+.section-3 {
+    height: 80vh;
+    background-image: url("./images/client-support.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.section-3-content {
+    margin-top: 15vh;
+}
+
+.section-3-content > ul {
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.section-3-content > ul > li {
+    padding: 4px;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: left center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.section-3-content > ul > li::before {
+    content: '';
+    display: inline-block;
+    background-image: url("./images/select.png");
+    background-size: cover;
+    height: 26px;
+    width: 26px;
+    margin-right: 4px;
+}
+
+.appointment {
+    color: var(--main-color);
+    background-color: white;
+    height: 50px;
+    width: 200px;
+    border-radius: 8px;
+    border: none;
+    transition: all .25s;
+}
+
+.appointment:hover {
+    color: white;
+    cursor: pointer;
+    background-color: var(--main-color);
+    border: 1px white solid;
+}
+
+.section-4 {
+    color: white;
+    background-color: var(--main-color);
+    height: 500px;
 }
